@@ -55,8 +55,8 @@ public class Fenetre extends JFrame {
 		
 		pan.add(valeurActuelContenuText,BorderLayout.SOUTH);
 		pan.add(valeurActuelContenu,BorderLayout.SOUTH);
-		pan.add(sliderConsomateur,BorderLayout.SOUTH);
 		pan.add(sliderProducteur,BorderLayout.SOUTH);
+		pan.add(sliderConsomateur,BorderLayout.SOUTH);
 		pan.add(sliderRecipient,BorderLayout.SOUTH);
 		pan.add(valeurTimeText,BorderLayout.SOUTH);
 		pan.add(valeurTime,BorderLayout.SOUTH);

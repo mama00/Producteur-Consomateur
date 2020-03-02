@@ -3,19 +3,23 @@ public class Main {
 
 	
 	public static void main(String[] args) {
+		//Object declaration
 		Time t=new Time();
-		Recipient r=new Recipient(300,50);
-		Consomateur consomateur=new Consomateur(5,t,r);
-		Producteur producteur=new Producteur(5,t,r);
+		Recipient recipient=new Recipient(2000,1000);
+		Consomateur consomateur=new Consomateur(5,t,recipient);
+		Producteur producteur=new Producteur(5,t,recipient);
+		
+		//Threads declaration
 		Thread consomateurThread=new Thread(consomateur);
 		Thread producteurThread=new Thread(producteur);
-		Thread recipientThread=new Thread(r);
+		Thread recipientThread=new Thread(recipient);
 		Thread timeThread=new Thread(t);
 
-		Fenetre fen=new Fenetre(consomateur,r,producteur);
-		r.setFen(fen);
+		Fenetre fen=new Fenetre(consomateur,recipient,producteur);
+		recipient.setFen(fen);
 		t.setFen(fen);
 
+		//Start
 		consomateurThread.start();
 		producteurThread.start();
 		recipientThread.start();
